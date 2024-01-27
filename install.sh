@@ -6,29 +6,29 @@ echo "Starting master setup..."
 read -p "Enter your GitHub username: " github_username
 echo $github_username > /tmp/github_username
 
-# Ensure that the dotfiles directory exists
-mkdir -p ~/dotfiles
+# Ensure that the myrepos directory exists
+mkdir -p ~/myrepos
 
-# Run SSH key generation script
-/bin/bash generate_ssh_key.sh
+# Download and run SSH key generation script
+curl -fsSL https://raw.githubusercontent.com/entegral/newinstall/master/generate_ssh_key.sh | /bin/bash
 
-# Run Xcode Command Line Tools and Git install script
-/bin/bash install_xcode_git.sh
+# Download and run Xcode Command Line Tools and Git install script
+curl -fsSL https://raw.githubusercontent.com/entegral/newinstall/master/install_xcode_git.sh | /bin/bash
 
-# Run Gitconfig install script
-/bin/bash install_gitconfig.sh
+# Download and run Gitconfig install script
+curl -fsSL https://raw.githubusercontent.com/entegral/newinstall/master/install_gitconfig.sh | /bin/bash
 
-# Run Homebrew install script
-/bin/bash install_brew.sh
+# Download and run Homebrew install script
+curl -fsSL https://raw.githubusercontent.com/entegral/newinstall/master/install_brew.sh | /bin/bash
 
-# Run Brewfile install script
-/bin/bash install_brewfile.sh
+# Download and run Brewfile install script
+curl -fsSL https://raw.githubusercontent.com/entegral/newinstall/master/install_brewfile.sh | /bin/bash
 
-# Run Zsh and Oh My Zsh install script
-/bin/bash install_zsh.sh
+# Download and run Zsh and Oh My Zsh install script
+curl -fsSL https://raw.githubusercontent.com/entegral/newinstall/master/install_zsh.sh | /bin/bash
 
-# Run Zshrc install script
-/bin/bash install_zshrc.sh
+# Download and run Zshrc install script
+curl -fsSL https://raw.githubusercontent.com/entegral/newinstall/master/install_zshrc.sh | /bin/bash
 
 # Delete the temporary file
 rm /tmp/github_username
