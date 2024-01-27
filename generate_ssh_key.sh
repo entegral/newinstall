@@ -13,9 +13,4 @@ eval "$(ssh-agent -s)"
 # Add SSH key to ssh-agent
 ssh-add ~/.ssh/id_rsa
 
-# Display the public key
-echo "Copy the following SSH public key and add it to your GitHub account:"
-cat ~/.ssh/id_rsa.pub
-echo
-
 echo "Generating a new SSH key for GitHub complete!"
