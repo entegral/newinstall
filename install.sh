@@ -39,14 +39,14 @@ fi
 curl -fsSL https://raw.githubusercontent.com/entegral/newinstall/master/install_gitconfig.sh | /bin/bash
 
 # Install Homebrew
-sudo dseditgroup -o edit -a $USER -t user admin
 echo "Installing Homebrew..."
 if which brew > /dev/null; then
     echo "Homebrew is already installed."
 else
+    sudo dseditgroup -o edit -a $USER -t user admin
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    echo "Homebrew installation complete!"
 fi
-echo "Homebrew installation complete!"
 
 # Download and run Brewfile install script
 curl -fsSL https://raw.githubusercontent.com/entegral/newinstall/master/install_brewfile.sh | /bin/bash
