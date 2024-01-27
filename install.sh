@@ -2,6 +2,10 @@
 
 echo "Starting master setup..."
 
+# Prompt for the GitHub username and save to temporary file
+read -p "Enter your GitHub username: " github_username
+echo $github_username > /tmp/github_username
+
 # Run SSH key generation script
 /bin/bash generate_ssh_key.sh
 
@@ -22,5 +26,8 @@ echo "Starting master setup..."
 
 # Run Zshrc install script
 /bin/bash install_zshrc.sh
+
+# Delete the temporary file
+rm /tmp/github_username
 
 echo "Master setup complete!"
