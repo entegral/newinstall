@@ -48,13 +48,9 @@ if which brew > /dev/null; then
 else
     sudo dseditgroup -o edit -a $USER -t user admin
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    eval "$(/opt/homebrew/bin/brew shellenv)"
     echo "Homebrew installation complete!"
 fi
-echo
-echo
-
-# Download and run Brewfile install script
-curl -fsSL https://raw.githubusercontent.com/entegral/newinstall/master/install_brewfile.sh | /bin/bash
 echo
 echo
 
@@ -65,6 +61,11 @@ echo
 
 # Download and run Zshrc install script
 curl -fsSL https://raw.githubusercontent.com/entegral/newinstall/master/install_zshrc.sh | /bin/bash
+echo
+echo
+
+# Download and run Brewfile install script
+curl -fsSL https://raw.githubusercontent.com/entegral/newinstall/master/install_brewfile.sh | /bin/bash
 echo
 echo
 
