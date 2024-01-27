@@ -18,7 +18,4 @@ echo "Copy the following SSH public key and add it to your GitHub account:"
 cat ~/.ssh/id_rsa.pub
 echo
 
-# Prompt to continue after adding the key to GitHub
-read -p "Press [Enter] key once the SSH key has been added to your GitHub account..."
-
 echo "Generating a new SSH key for GitHub complete!"
