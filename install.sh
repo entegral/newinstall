@@ -8,6 +8,9 @@ echo "Starting master setup..."
 # Run Xcode Command Line Tools and Git install script
 /bin/bash install_xcode_git.sh
 
+# Run Gitconfig install script
+/bin/bash install_gitconfig.sh
+
 # Run Homebrew install script
 /bin/bash install_brew.sh
 
@@ -16,5 +19,8 @@ echo "Starting master setup..."
 
 # Run Zsh and Oh My Zsh install script
 /bin/bash install_zsh.sh
+
+# Run Zshrc install script
+/bin/bash install_zshrc.sh
 
 echo "Master setup complete!"
