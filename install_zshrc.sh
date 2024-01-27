@@ -3,8 +3,8 @@
 echo "Cloning the zshrc repository using SSH..."
 github_username=$(cat /tmp/github_username)
 
-# Change to the myrepos directory
-cd ~/myrepos
+# Change to the dotfiles directory
+cd ~/dotfiles
 
 # Clone the zshrc repository using SSH
 git clone git@github.com:$github_username/zshrc.git

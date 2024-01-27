@@ -6,8 +6,8 @@ echo "Starting master setup..."
 read -p "Enter your GitHub username: " github_username
 echo $github_username > /tmp/github_username
 
-# Ensure that the myrepos directory exists
-mkdir -p ~/myrepos
+# Ensure that the dotfiles directory exists
+mkdir -p ~/dotfiles
 
 # Run SSH key generation script
 /bin/bash generate_ssh_key.sh
