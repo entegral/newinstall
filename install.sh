@@ -6,8 +6,8 @@ echo "Starting master setup..."
 read -p "Enter your GitHub username: " github_username
 echo $github_username > /tmp/github_username
 
-# Ensure that the myrepos directory exists
-mkdir -p ~/myrepos
+# Ensure that the dotfiles directory exists
+mkdir -p ~/dotfiles
 
 # Download and run SSH key generation script
 curl -fsSL https://raw.githubusercontent.com/entegral/newinstall/master/generate_ssh_key.sh | /bin/bash
