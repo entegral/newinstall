@@ -28,4 +28,5 @@ this is a zshrc file(s) that will be symlinked to `~/.zshrc`
 To set up a new machine, you can run the following command:
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/entegral/repo/master/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/entegral/newinstall/master/install.sh)"
+```
