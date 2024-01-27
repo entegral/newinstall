@@ -17,6 +17,7 @@ curl -fsSL https://raw.githubusercontent.com/entegral/newinstall/master/generate
 echo "Copy the following SSH public key and add it to your GitHub account:"
 cat ~/.ssh/id_rsa.pub
 echo
+echo
 
 # Prompt to continue after adding the key to GitHub
 read -p "Press [Enter] key once the SSH key has been added to your GitHub account..."
@@ -26,6 +27,8 @@ curl -fsSL https://raw.githubusercontent.com/entegral/newinstall/master/install_
 
 # Wait until Xcode Command Line Tools are installed
 read -p "Press [Enter] key after Xcode Command Line Tools installation is complete..."
+echo
+echo
 
 # Validate Git installation
 if which git > /dev/null; then
@@ -47,15 +50,23 @@ else
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     echo "Homebrew installation complete!"
 fi
+echo
+echo
 
 # Download and run Brewfile install script
 curl -fsSL https://raw.githubusercontent.com/entegral/newinstall/master/install_brewfile.sh | /bin/bash
+echo
+echo
 
 # Download and run Zsh and Oh My Zsh install script
 curl -fsSL https://raw.githubusercontent.com/entegral/newinstall/master/install_zsh.sh | /bin/bash
+echo
+echo
 
 # Download and run Zshrc install script
 curl -fsSL https://raw.githubusercontent.com/entegral/newinstall/master/install_zshrc.sh | /bin/bash
+echo
+echo
 
 # Delete the temporary file
 rm /tmp/github_username
